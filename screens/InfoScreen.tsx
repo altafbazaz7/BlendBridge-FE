@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View, Animated, Easing, PanResponder } from "react-native";
 import React, { useEffect } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { useNavigation } from "@react-navigation/native";
+import { NavigationProp, useNavigation } from "@react-navigation/native";
 
-const HomeScreen = () => {
+const InfoScreen = () => {
   const headingOpacity = new Animated.Value(0);
   const bodyOpacity = new Animated.Value(0);
   const slideAnimation = new Animated.Value(0);
@@ -24,7 +24,7 @@ const HomeScreen = () => {
 
   }, []);
 
-  const navigation = useNavigation();
+  const navigation : NavigationProp<any>= useNavigation();
 
   const panResponder = React.useRef(
     PanResponder.create({
@@ -66,7 +66,7 @@ const HomeScreen = () => {
   );
 };
 
-export default HomeScreen;
+export default InfoScreen;
 
 export const styles = StyleSheet.create({
   container: {

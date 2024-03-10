@@ -1,15 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import {styles} from "./HomeScreen";
-
+import React from 'react';
+import AuthScreen from './AuthScreen';
 
 const LoginScreen = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.heading_text}>LoginScreen</Text>
-    </View>
-  )
-}
+    <AuthScreen
+      title="Login"
+      buttonText="Login"
+      navigateActionText="Don't have an account? Sign up"
+      navigateScreen="Signup"
+    />
+  );
+};
 
-export default LoginScreen
-
+export default LoginScreen;

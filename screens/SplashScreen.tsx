@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { StyleSheet, View, Animated, Image } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
 
 const SplashScreen = () => {
-  const navigation = useNavigation();
+  const navigation : NavigationProp<any> = useNavigation();
 
   const translateY = new Animated.Value(500);
   const opacity = new Animated.Value(0);

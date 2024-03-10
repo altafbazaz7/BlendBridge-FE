@@ -3,9 +3,10 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context'; // Import SafeAreaProvider
-import HomeScreen from './screens/HomeScreen';
 import SplashScreen from './screens/SplashScreen';
 import LoginScreen from './screens/LoginScreen';
+import SignupScreen from './screens/SignupScreen';
+import InfoScreen from './screens/InfoScreen';
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -13,10 +14,10 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        <Stack.Navigator initalRouteName="Splash"
+        <Stack.Navigator initialRouteName="Splash"
          screenOptions={{
           headerShown: false,
-          animationTypeForReplace: 'push-from-bottom', 
+          animationTypeForReplace: 'push', 
         }}
         >
         <Stack.Screen
@@ -28,7 +29,7 @@ export default function App() {
           />
           <Stack.Screen
             name="Home"
-            component={HomeScreen}
+            component={InfoScreen}
             options={{
               headerShown: false
             }}
@@ -36,6 +37,13 @@ export default function App() {
              <Stack.Screen
             name="Login"
             component={LoginScreen}
+            options={{
+              headerShown: false
+            }}
+          />
+            <Stack.Screen
+            name="Signup"
+            component={SignupScreen}
             options={{
               headerShown: false
             }}
