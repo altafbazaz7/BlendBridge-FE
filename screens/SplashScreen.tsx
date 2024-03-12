@@ -23,7 +23,7 @@ const SplashScreen = () => {
     ]).start();
 
     const timer = setTimeout(() => {
-      navigation.navigate('Home');
+      navigation.navigate('Info');
     }, 1500);
 
     return () => clearTimeout(timer);
